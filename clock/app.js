@@ -1,24 +1,20 @@
-var hrs = document.getElementById("hrs");
-var min = document.getElementById("min");
-var sec = document.getElementById("sec");
-var period = document.getElementById("period"); 
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  let ampm = hours >= 12 ? 'PM' : 'AM'; 
 
-setInterval(() => {
-  let currentTime = new Date();
-
-  let hours = currentTime.getHours();
-  let minutes = currentTime.getMinutes();
-  let seconds = currentTime.getSeconds();
-
-  let ampm = hours >= 12 ? "PM" : "AM";
-
-  hours = hours % 12;
+  hours = hours % 12; 
   hours = hours ? hours : 12; 
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
-  min.innerHTML = (minutes < 10 ? "0" : "") + minutes;
-  sec.innerHTML = (seconds < 10 ? "0" : "") + seconds;
+  document.getElementById('hrs').innerText = hours;
+  document.getElementById('min').innerText = minutes;
+  document.getElementById('sec').innerText = seconds;
+  document.getElementById('ampm').innerText = ampm;
+}
 
-  period.innerHTML = ampm;
-
-}, 1000);
+setInterval(updateClock, 1000); 
+updateClock();
