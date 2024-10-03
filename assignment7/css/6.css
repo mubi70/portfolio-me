@@ -1,0 +1,117 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.color-block {
+  flex: 1 1 calc(23.333% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.button1 {
+  border-radius: 30%;
+  color: blue;
+  font-size: 90%;
+  background: white;
+  border: .1rem solid blue;
+  padding: .8rem 1.5rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  margin: 1%;
+}
+
+.button1:hover {
+  letter-spacing: 0.25em;
+  background-color: blue;
+  color: aliceblue;
+}
+
+.hex-code .color-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hex-code .color-block:hover {
+  opacity: 1;
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .color-block {
+      flex: 1 1 calc(31% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .color-block {
+      flex: 1 1 calc(48% - 10px);
+  }
+
+  .button1 {
+      font-size: 80%;
+  }
+
+  button {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .color-block {
+      flex: 1 1 100%;
+  }
+
+  .button1 {
+      font-size: 70%;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
