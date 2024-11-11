@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 20px; 
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+.active {
+    opacity: 1;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 35vh;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
