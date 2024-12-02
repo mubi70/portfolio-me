@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('./boats-45a.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333; /* Dark gray fallback */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.9); /* Slightly transparent dark gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Deep shadow for depth */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text for contrast */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #d1d1d1; /* Light gray for labels */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555555; /* Medium gray border */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #444444; /* Dark gray background */
+    color: #f8f8f8; /* Soft white text */
+    box-sizing: border-box;
+  }
+  
+  input::placeholder {
+    color: #a8a8a8; /* Light gray placeholder */
+  }
+  
+  input:focus {
+    border-color: #888888; /* Highlighted medium gray */
+    outline: none;
+    background-color: #555555; /* Slightly lighter on focus */
+  }
+  
+  .error {
+    color: #ff6b6b; /* Soft red for error messages */
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c757d; /* Medium gray button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5a6268; /* Slightly darker gray */
+  }
+  
+  .message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ff6b6b; /* Soft red for default messages */
+  }
+  
+  .message.success {
+    color: #28a745; /* Green for success messages */
+  }
+  
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #d1d1d1; /* Light gray for footer text */
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    input,
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .footer {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 16px;
+    }
+  
+    input,
+    button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .message,
+    .error {
+      font-size: 10px;
+    }
+  
+    .footer {
+      font-size: 10px;
+    }
+  }
+  
